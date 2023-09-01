@@ -9,8 +9,14 @@
 // ver 2. refactor code to include player 2.
 // ver 3. implement comparing dice scores and declare winner.
 // ver 4. reset the game so that the players can play continually without refreshing the browser page.
-
-var main = function (input) {
-  var myOutputValue = "hello world";
-  return myOutputValue;
+function rollDie() {
+  return Math.floor(Math.random() * 6) + 1;
+}
+var gameMode = "Start";
+var main = function () {
+  if ((gameMode = "start")) {
+    var die1 = rollDie();
+    var die2 = rollDie();
+    return `Welcome Player One! <br> <br> You rolled ${die1} for first die and ${die2} for the second die. <br> Please key 1 or 2 to choose the dice order!`;
+  }
 };
